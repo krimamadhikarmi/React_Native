@@ -1,4 +1,4 @@
-import { Button, View } from "react-native"
+import { Button, TouchableHighlight, View,Text} from "react-native"
 export default function Home({navigation}){
     return(
         <View> 
@@ -9,7 +9,11 @@ export default function Home({navigation}){
             <Button title="Color" onPress={() => {navigation.navigate('ColorScreen')} }/>
             <Button title="Square" onPress={() => {navigation.navigate('SquareScreen')} }/>
             <Button title="Text Screen" onPress={() => {navigation.navigate('TextScreen')} }/>
-        </View>
-        
+            <Button title="Section Screen" onPress={()=>{navigation.navigate('SectionScreen')}}/>
+            <Button title="Scroll Screen" onPress={()=>{navigation.navigate('ScrollScreen')}}/>
+            <TouchableHighlight activeOpacity={0.6} underlayColor={'plum'} onPress={()=>{navigation.navigate('ScrollScreen')}}>
+                <Text>Click Me</Text>
+            </TouchableHighlight>
+        </View>  
     )
 }
